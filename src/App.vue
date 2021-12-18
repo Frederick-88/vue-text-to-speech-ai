@@ -16,16 +16,11 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
   }
+}
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p {
-    margin: 0;
-  }
+body {
+  margin: 0;
+  padding: 0;
 }
 
 // #nav {
