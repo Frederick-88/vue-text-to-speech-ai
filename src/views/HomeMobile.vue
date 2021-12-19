@@ -58,7 +58,6 @@ export default {
     return {
       wordInput: "",
       selectedVoice: "woman",
-      selectedSpeed: 1,
       speechSynthesis: window.speechSynthesis,
       voiceList: [],
       wordReaderAi: new window.SpeechSynthesisUtterance(),
@@ -121,7 +120,6 @@ export default {
 
       this.wordReaderAi.text = this.wordInput;
       this.wordReaderAi.voice = this.voiceList[voiceToIndex];
-      this.wordReaderAi.rate = this.selectedSpeed;
       this.speechSynthesis.speak(this.wordReaderAi);
     },
   },
