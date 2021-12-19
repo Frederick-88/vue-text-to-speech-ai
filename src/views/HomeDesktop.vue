@@ -49,17 +49,6 @@
                 class="radio-list-item"
                 v-model="selectedSpeed"
                 type="radio"
-                name="0.25"
-                id="0.25"
-                :value="0.25"
-              />
-              <label class="radio-list-label" for="0.25"> 0.25 </label>
-            </div>
-            <div class="radio-list-item-container">
-              <input
-                class="radio-list-item"
-                v-model="selectedSpeed"
-                type="radio"
                 name="0.5"
                 id="0.5"
                 :value="0.5"
@@ -276,14 +265,13 @@ export default {
 
   .content-container {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     width: 100%;
     margin: 80px 0 30px;
 
     .radiobox-container {
       width: 20%;
-      
+
       .radiobox-title {
         font-size: 1.25rem;
         margin-bottom: 20px;
@@ -308,12 +296,47 @@ export default {
 
         .radio-list-item {
           cursor: pointer;
+          display: none;
         }
 
         .radio-list-label {
           font-size: 1rem;
           margin-left: 8px;
           cursor: pointer;
+
+          &:hover {
+            &:before {
+              transition: filter 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+              filter: brightness(0.65);
+            }
+          }
+        }
+
+        .radio-list-label:before {
+          content: " ";
+          display: inline-block;
+          position: relative;
+          top: 5px;
+          left: -12px;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          border: 2px solid white;
+          background-color: white;
+        }
+
+        .radio-list-item:checked + .radio-list-label:before {
+          content: " ";
+          display: inline-block;
+          position: relative;
+          border: 4px solid white;
+          border-radius: 50%;
+          width: 11px;
+          height: 11px;
+          top: 5px;
+          left: -12px;
+          background-color: #2a74e3;
+          filter: brightness(1);
         }
       }
     }
