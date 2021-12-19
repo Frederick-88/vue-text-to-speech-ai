@@ -1,5 +1,4 @@
 <template>
-  <!-- https://github.com/tjFogarty/speech-synthesis -->
   <div class="word-reader-container--desktop">
     <form class="word-reader-form" @submit.prevent="startAi">
       <h2 class="title">Word Reader</h2>
@@ -53,7 +52,7 @@
                 id="0.5"
                 :value="0.5"
               />
-              <label class="radio-list-label" for="0.5"> 0.5 </label>
+              <label class="radio-list-label" for="0.5"> 0.5 x </label>
             </div>
             <div class="radio-list-item-container">
               <input
@@ -64,7 +63,7 @@
                 id="0.75"
                 :value="0.75"
               />
-              <label class="radio-list-label" for="0.75"> 0.75 </label>
+              <label class="radio-list-label" for="0.75"> 0.75 x </label>
             </div>
             <div class="radio-list-item-container">
               <input
@@ -75,7 +74,7 @@
                 id="1"
                 :value="1"
               />
-              <label class="radio-list-label" for="1"> 1.0 </label>
+              <label class="radio-list-label" for="1"> 1.0 x </label>
             </div>
             <div class="radio-list-item-container">
               <input
@@ -86,7 +85,7 @@
                 id="1.25"
                 :value="1.25"
               />
-              <label class="radio-list-label" for="1.25"> 1.25 </label>
+              <label class="radio-list-label" for="1.25"> 1.25 x </label>
             </div>
             <div class="radio-list-item-container">
               <input
@@ -97,7 +96,7 @@
                 id="1.5"
                 :value="1.5"
               />
-              <label class="radio-list-label" for="1.5"> 1.5 </label>
+              <label class="radio-list-label" for="1.5"> 1.5 x </label>
             </div>
           </div>
         </div>
