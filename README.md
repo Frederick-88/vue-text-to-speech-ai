@@ -2,6 +2,13 @@
 
 ### an AI about text to speech in Vue web application
 
+### Hosted Vue Website URL -> https://vue-text-to-speech.netlify.app/
+
+---
+### Reference :
+- Figma by Chen Frederick: https://www.figma.com/file/TXjGPjSsMVkbzP8RWJSB6b/AI---Word-Reader?node-id=0%3A1
+- https://codepen.io/evlads/pen/bYGMEe
+
 ### Netlify Deployment Issues :
 #### Problem / Error Logs from Netlify :
 ```
