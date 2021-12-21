@@ -1,5 +1,4 @@
 <template>
-  <!-- https://github.com/tjFogarty/speech-synthesis -->
   <form class="word-reader-container--mobile" @submit.prevent="startAi">
     <h2 class="title">Word Reader</h2>
 
