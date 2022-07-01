@@ -14,9 +14,9 @@
         type="button"
         class="controller"
         :class="{ 'is-disabled': !isPlaying }"
-        @click="pauseAi"
+        @click="stopAi"
       >
-        Pause
+        Stop
       </button>
     </div>
 
@@ -99,14 +99,14 @@ export default {
      * Selecting type of voice (man / woman)
      */
     selectVoice(type) {
-      this.pauseAi();
+      this.stopAi();
       this.selectedVoice = type;
     },
 
     /**
-     * Pause the AI of text-to-speech
+     * Stop the AI of text-to-speech
      */
-    pauseAi() {
+    stopAi() {
       this.speechSynthesis.cancel();
     },
 
@@ -114,8 +114,16 @@ export default {
      * Run the AI of text-to-speech with selected controls
      */
     startAi() {
+      const womanUKIndex = this.voiceList.findIndex(
+        (voice) => voice.name.includes("UK") && voice.name.includes("Female")
+      );
+      const manUKIndex = this.voiceList.findIndex(
+        (voice) => voice.name.includes("UK") && voice.name.includes("Male")
+      );
+      const voiceToIndex =
+        this.selectedVoice === "woman" ? womanUKIndex : manUKIndex;
+
       console.log("AI works");
-      const voiceToIndex = this.selectedVoice === "woman" ? 2 : 3; // only get the UK versions of female & male
 
       this.wordReaderAi.text = this.wordInput;
       this.wordReaderAi.voice = this.voiceList[voiceToIndex];
